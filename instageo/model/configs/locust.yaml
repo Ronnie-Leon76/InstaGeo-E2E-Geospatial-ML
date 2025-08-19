@@ -13,6 +13,10 @@ train:
   class_weights: [1, 1]
   ignore_index: -1
   weight_decay: 0.1
+  lr_scheduler:
+    name: cosine_annealing
+    T_max: 10  # Total number of epochs for cosine annealing
+    eta_min: 1e-5
 
 model:
   freeze_backbone: False
